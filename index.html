@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img {
+            max-width: 100%;
+            max-height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validateForm() {
+            var userInput = document.getElementById("fname").value;
+            var correctAnswer = "coffin";             
+            if (userInput === correctAnswer) {
+                window.location.href = "nextPage.html";
+                return false; 
+            } else {
+                alert("Incorrect answer");
+                return false; 
+            }
+        }
+        </script>
+        
+
+    <section class="text-gray-600 body-font">
+        <div>
+            <img src="image.png" />
+        </div>
+        <div>
+            <h1>
+                Read the question and answer
+            </h1>
+            <form onsubmit="return validateForm()" method="POST">
+                <label for="fname">The person who makes it, sells it. The person who buys it never uses it. 
+                    The person who uses it never knows they're using it. What is it?</label>
+                <input type="text" id="fname" name="fname"><br><br>
+
+
+                <label for="cap">enter the captcha</label><br><br>
+                <input type="cap" id="cap" name="cap">
+                <button type="submit" style="background-color: blue; border-radius: 25px; padding: 10px 50px;">
+                    Submit
+                </button>
+            </form>
+            
+
+        </div>
+    </section>
+</body>
+
+</html>
